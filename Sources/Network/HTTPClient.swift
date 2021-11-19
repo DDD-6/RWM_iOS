@@ -7,3 +7,14 @@
 //
 
 import Foundation
+import RxSwift
+import Moya
+
+class HTTPClient {
+    public static let shared = HTTPClient()
+    private let provider = MoyaProvider<RWMAPI>()
+
+    public func networking<T: Codable>(api: RWMAPI, model networkModel: T.Type) -> Single<T> {
+        return provider.rx.request(api).map(T.self)
+    }
+}
