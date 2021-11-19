@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.4.4)
+  - KeychainSwift (19.0.0)
   - Moya/Core (15.0.0):
     - Alamofire (~> 5.0)
   - Moya/RxSwift (15.0.0):
@@ -62,6 +63,7 @@ PODS:
   - WeakMapTable (1.2.0)
 
 DEPENDENCIES:
+  - KeychainSwift (~> 19.0)
   - Moya/RxSwift (~> 15.0)
   - ReactorKit (~> 3.1.0)
   - RxSwift (~> 6.2.0)
@@ -75,6 +77,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - KeychainSwift
     - Moya
     - PINCache
     - PINOperation
@@ -94,6 +97,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
+  KeychainSwift: a06190cf933ad46b1e0abc3d77d29c06331715c7
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   PINCache: 7a8fc1a691173d21dbddbf86cd515de6efa55086
   PINOperation: 00c935935f1e8cf0d1e2d6b542e75b88fc3e5e20
@@ -111,6 +115,6 @@ SPEC CHECKSUMS:
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
   WeakMapTable: 05c694ce8439a7a9ebabb56187287a63c57673d6
 
-PODFILE CHECKSUM: 66945b0780b132a668c68bc3992f7eea58dbd4d0
+PODFILE CHECKSUM: 09877a3d5f9b240dacb9e8a21b0dbd7131b4b521
 
-COCOAPODS: 1.10.2
+COCOAPODS: 1.11.2
