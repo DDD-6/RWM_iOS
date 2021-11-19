@@ -97,11 +97,29 @@ extension RWMAPI: TargetType {
     }
 
     var headers: [String: String]? {
-        return [:]
+        switch self {
+        case .kakaoLogin:
+            return ["Content-Type": "application/json"]
+        default:
+            return [
+                "Authorization": "Bearer " + accessTocken,
+                "Content-Type": "application/json"
+            ]
+        }
     }
 
     var validationType: ValidationType {
         return .successAndRedirectCodes
+    }
+
+    private var accessTocken: String {
+        let keychain = KeychainSwift()
+        return keychain.get("ACCESS-TOKEN") ?? ""
+    }
+
+    private var refreshToken: String {
+        let keychain = KeychainSwift()
+        return keychain.get("REFRESH-TOKEN") ?? ""
     }
 
 }
