@@ -27,5 +27,6 @@ target 'RWM' do
   # E.C.T
   pod 'Then', '~> 2.7.0'
   pod 'SwiftLint', '~> 0.43.0'
+  pod 'KeychainSwift', '~> 19.0'
 
 end
