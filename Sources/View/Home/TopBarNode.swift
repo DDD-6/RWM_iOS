@@ -81,19 +81,9 @@ class TopBarNode: ASDisplayNode {
         self.styled {
             $0.preferredSize.height = 120
         }
-        self.withAnyoneButtonNode.rx.tap
-            .subscribe(onNext: {
-                print("!!!")
-                self.selectWithAnyone()
-            })
-        self.withFriendButtonNode.rx.tap
-            .subscribe(onNext: {
-                print("!!!")
-                self.selectWithFriend()
-            })
     }
 
-    // MARK: Public Mrthod
+    // MARK: Public Method
 
     public func selectWithFriend() {
         withFriendButtonNode.isSelected = true
